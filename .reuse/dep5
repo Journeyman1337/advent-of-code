@@ -1,0 +1,10 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: jman-advent-of-code
+Upstream-Contact: Daniel Aimé Valcour <FossSweeper@gmail.com>
+Source: https://github.com/Journeyman1337/advent-of-code
+
+# Sample paragraph, commented out:
+#
+# Files: src/*
+# Copyright: $YEAR $NAME <$CONTACT>
+# License: ...
