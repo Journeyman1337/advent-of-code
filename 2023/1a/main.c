@@ -11,52 +11,12 @@
 
 const int NO_DIGIT = -1;
 
-int cstr_get_digit(char* cstr, size_t length)
+int cstr_get_digit(const char* cstr, size_t length)
 {
     if (isdigit(cstr[0]))
     {
         char short_cstr[2] = { cstr[0], '\0'};
         return atoi(short_cstr);
-    }
-    if (strcmp(cstr, "zero") == 0)
-    {
-        return 0;
-    }
-    if (strcmp(cstr, "one") == 0)
-    {
-        return 1;
-    }
-    if (strcmp(cstr, "two") == 0)
-    {
-        return 2;
-    }
-    if (strcmp(cstr, "three") == 0)
-    {
-        return 3;
-    }
-    if (strcmp(cstr, "four") == 0)
-    {
-        return 4;
-    }
-    if (strcmp(cstr, "five") == 0)
-    {
-        return 5;
-    }
-    if (strcmp(cstr, "six") == 0)
-    {
-        return 6;
-    }
-    if (strcmp(cstr, "seven") == 0)
-    {
-        return 7;
-    }
-    if (strcmp(cstr, "eight") == 0)
-    {
-        return 8;
-    }
-    if (strcmp(cstr, "nine") == 0)
-    {
-        return 9;
     }
     return NO_DIGIT;
 }
