@@ -9,52 +9,63 @@
 #include <stdbool.h>
 #include <string.h>
 
+#define MIN(a,b) (((a)<(b))?(a):(b))
+
 const int NO_DIGIT = -1;
 
-int cstr_get_digit(char* cstr, size_t length)
+bool cstr_equal(const char* cstr, const char* equal_cstr)
+{
+    if (strlen(cstr) < strlen(equal_cstr))
+    {
+        return false;
+    }
+    if (strncmp(cstr, equal_cstr, strlen(equal_cstr)) == 0)
+    {
+        return true;
+    }
+    return false;
+}
+
+int cstr_get_digit(const char* cstr, size_t length)
 {
     if (isdigit(cstr[0]))
     {
         char short_cstr[2] = { cstr[0], '\0'};
         return atoi(short_cstr);
     }
-    if (strcmp(cstr, "zero") == 0)
-    {
-        return 0;
-    }
-    if (strcmp(cstr, "one") == 0)
+    if (cstr_equal(cstr, "one"))
     {
         return 1;
     }
-    if (strcmp(cstr, "two") == 0)
+    if (cstr_equal(cstr, "two"))
     {
         return 2;
     }
-    if (strcmp(cstr, "three") == 0)
+    if (cstr_equal(cstr, "three"))
     {
         return 3;
     }
-    if (strcmp(cstr, "four") == 0)
+    if (cstr_equal(cstr, "four"))
     {
         return 4;
     }
-    if (strcmp(cstr, "five") == 0)
+    if (cstr_equal(cstr, "five"))
     {
         return 5;
     }
-    if (strcmp(cstr, "six") == 0)
+    if (cstr_equal(cstr, "six"))
     {
         return 6;
     }
-    if (strcmp(cstr, "seven") == 0)
+    if (cstr_equal(cstr, "seven"))
     {
         return 7;
     }
-    if (strcmp(cstr, "eight") == 0)
+    if (cstr_equal(cstr, "eight"))
     {
         return 8;
     }
-    if (strcmp(cstr, "nine") == 0)
+    if (cstr_equal(cstr, "nine"))
     {
         return 9;
     }
