@@ -110,6 +110,7 @@ int main()
     if (line != NULL)
     {
         free(line);
+        line = NULL;
     }
     printf("%d\n", result);
     fclose(f);
