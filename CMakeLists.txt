@@ -31,5 +31,5 @@ function(aoc_year YEAR)
 	endforeach()
 endfunction()
 
-aoc_year(2023)
+aoc_year(2024)
 
