@@ -97,7 +97,9 @@ int main()
         while (value_ptr != NULL)
         {
             total += value_ptr->left_count * value_ptr->right_count * value_ptr->value;
+            struct ValueCount* old_value_ptr = value_ptr;
             value_ptr = value_ptr->next_value_ptr;
+            free(old_value_ptr);
         }
     }
     printf("the total is %d\n", total);
